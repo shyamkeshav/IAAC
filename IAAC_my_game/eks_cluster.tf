@@ -3,7 +3,7 @@ resource "aws_eks_cluster" "game_cluster" {
   role_arn = aws_iam_role.cluster_role.arn
 
   vpc_config {
-    subnet_ids              = [aws_subnet.public_1a.id, aws_subnet.public_1b.id]
+    subnet_ids              = [aws_subnet.public_subnet_1a.id, aws_subnet.public_subnet_1b.id]
     endpoint_private_access = true
     endpoint_public_access  = true # Allows you to issue kubectl commands from your laptop
   }
