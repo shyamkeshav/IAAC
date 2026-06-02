@@ -1,0 +1,24 @@
+#subnets
+resource "aws_subnet" "public_subnet_1a" {
+  vpc_id     = aws_vpc.terraform_vpc.id
+  cidr_block = "10.0.0.32/24"
+
+  tags = {
+    Name = "public_subnet_1a"
+    "kubernetes.io/role/elb"           = "1"
+    "kubernetes.io/cluster/game-cluster" = "shared"
+  }
+  availability_zone = "ap-south-1a"
+}
+
+resource "aws_subnet" "public_subnet_1b" {
+  vpc_id     = aws_vpc.terraform_vpc.id
+  cidr_block = "10.0.0.48/24"
+
+  tags = {
+    Name = "public_subnet_1b"
+    "kubernetes.io/role/elb"           = "1"
+    "kubernetes.io/cluster/game-cluster" = "shared"
+  }
+  availability_zone = "ap-south-1b"
+}
