@@ -8,9 +8,6 @@ terraform {
       source = "hashicorp/tls"
     }
 
-    helm = {
-      source = "hashicorp/helm"
-    }
   }
 }
 
