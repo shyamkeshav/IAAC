@@ -17,3 +17,11 @@ terraform {
 provider "aws" {
   region = "ap-south-1"
 }
+
+data "aws_eks_cluster" "game_cluster" {
+  name = aws_eks_cluster.game_cluster.name
+}
+
+data "aws_eks_cluster_auth" "game_cluster" {
+  name = aws_eks_cluster.game_cluster.name
+}
