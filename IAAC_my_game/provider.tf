@@ -7,11 +7,6 @@ terraform {
     tls = {
       source = "hashicorp/tls"
     }
-
-    helm = {
-      source = "hashicorp/helm"
-      version = "3.2.0"
-    }
   }
 }
 
