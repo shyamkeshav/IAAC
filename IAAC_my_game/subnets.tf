@@ -1,11 +1,7 @@
 #subnets
 resource "aws_subnet" "public_subnet_1a" {
   vpc_id     = aws_vpc.terraform_vpc.id
-<<<<<<< HEAD
   cidr_block = "10.0.0.0/24"
-=======
-  cidr_block = "10.0.1.0/24"
->>>>>>> b8faecb35ef2f07a6e09e4ad1704c05471076fa5
   
   # Important for Public Node setups: Automatically assigns public IPs to instances
   map_public_ip_on_launch = true
@@ -20,11 +16,7 @@ resource "aws_subnet" "public_subnet_1a" {
 
 resource "aws_subnet" "public_subnet_1b" {
   vpc_id     = aws_vpc.terraform_vpc.id
-<<<<<<< HEAD
   cidr_block = "10.0.1.0/24"
-=======
-  cidr_block = "10.0.2.0/24"
->>>>>>> b8faecb35ef2f07a6e09e4ad1704c05471076fa5
   
   # Important for Public Node setups: Automatically assigns public IPs to instances
   map_public_ip_on_launch = true
